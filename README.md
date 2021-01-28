@@ -1,10 +1,10 @@
-[![](https://img.shields.io/github/release-date/New-Horizon-Network/Hulu-electron)](https://github.com/New-Horizon-Network/Hulu-electron/releases)
-[![](https://img.shields.io/github/issues-pr-raw/New-Horizon-Network/Hulu-electron)](https://github.com/New-Horizon-Network/Hulu-electron)
-[![](https://img.shields.io/github/issues-raw/New-Horizon-Network/Hulu-electron)](https://github.com/New-Horizon-Network/Pylon-Bot/blob/master/.github/ISSUE_TEMPLATE/bug_report.md)
-[![](https://img.shields.io/github/last-commit/New-Horizon-Network/Hulu-electron/main)](https://github.com/New-Horizon-Network/Hulu-electron)
-[![](https://img.shields.io/github/languages/code-size/New-Horizon-Network/Hulu-electron)](https://github.com/New-Horizon-Network/Hulu-electron)
-[![](https://img.shields.io/github/downloads/New-Horizon-Network/Hulu-electron/total)](https://github.com/New-Horizon-Network/Hulu-electron/releases/download/v1.1.0/Hulu-setup-110.exe)
-[![](https://discordapp.com/api/guilds/765992820841513050/widget.png?style=shield)](https://discord.gg/WacrBbFemB)
+[![](https://img.shields.io/github/release-date/PhantomNimbi/Hulu-electron)](https://github.com/PhantomNimbi/Hulu-electron/releases)
+[![](https://img.shields.io/github/issues-pr-raw/PhantomNimbi/Hulu-electron)](https://github.com/PhantomNimbi/Hulu-electron)
+[![](https://img.shields.io/github/issues-raw/PhantomNimbi/Hulu-electron)](https://github.com/PhantomNimbi/Hulu-electron/blob/master/.github/ISSUE_TEMPLATE/bug_report.md)
+[![](https://img.shields.io/github/last-commit/PhantomNimbi/Hulu-electron/main)](https://github.com/PhantomNimbi/Hulu-electron)
+[![](https://img.shields.io/github/languages/code-size/PhantomNimbi/Hulu-electron)](https://github.com/PhantomNimbi/Hulu-electron)
+[![](https://img.shields.io/github/downloads/PhantomNimbi/Hulu-electron/total)](https://github.com/PhantomNimbi/Hulu-electron/releases/download/v1.1.0/Hulu-setup-110.exe)
+[![](https://discordapp.com/api/guilds/801125364218200074/widget.png?style=shield)](https://discord.gg/WacrBbFemB)
 
 
 [![](https://assetshuluimcom-a.akamaihd.net/h3o/facebook_share_thumb_default_hulu.jpg)](https://www.hulu.com/)
