@@ -25,6 +25,8 @@ if (__webpack_require__(67)) {
 }
 const APP_ARGS_FILE_PATH = path_1.default.join(__dirname, '..', 'nativefier.json');
 const appArgs = JSON.parse(fs_1.default.readFileSync(APP_ARGS_FILE_PATH, 'utf8'));
+const OLD_BUILD_WARNING_THRESHOLD_DAYS = 60;
+const OLD_BUILD_WARNING_THRESHOLD_MS = OLD_BUILD_WARNING_THRESHOLD_DAYS * 24 * 60 * 60 * 1000;
 const fileDownloadOptions = Object.assign({}, appArgs.fileDownloadOptions);
 electron_dl_1.default(fileDownloadOptions);
 if (appArgs.processEnvs) {
@@ -141,6 +143,15 @@ else {
                         mainWindow.webContents.sendInputEvent(inputEvent);
                     });
                 });
+            });
+        }
+        if (!appArgs.disableOldBuildWarning &&
+            new Date().getTime() - appArgs.buildDate > OLD_BUILD_WARNING_THRESHOLD_MS) {
+            // eslint-disable-next-line @typescript-eslint/no-floating-promises
+            electron_1.dialog.showMessageBox(null, {
+                type: 'warning',
+                message: 'Old build detected',
+                detail: 'This app was built a long time ago. Nativefier uses the Chrome browser (through Electron), and it is dangerous to keep using an old version of it. You should rebuild this app with a recent Electron. Using the latest Nativefier will default to it, or you can pass it manually.',
             });
         }
     });
@@ -4748,6 +4759,9 @@ function createMainWindow(nativefierOptions, onAppQuit, setDockBadge) {
             console.log(`WARNING: Ignored nativefier.json rewrital (${err.toString()})`);
         }
     }
+    if (options.tray === 'start-in-tray') {
+        mainWindow.hide();
+    }
     const withFocusedWindow = (block) => {
         const focusedWindow = electron_1.BrowserWindow.getFocusedWindow();
         if (focusedWindow) {
@@ -6943,6 +6957,10 @@ const create = (win, options) => {
 	webContents(win).on('context-menu', handleContextMenu);
 
 	return () => {
+		if (win.isDestroyed()) {
+			return;
+		}
+
 		webContents(win).removeListener('context-menu', handleContextMenu);
 	};
 };
@@ -6957,8 +6975,21 @@ module.exports = (options = {}) => {
 		}
 
 		const disposeMenu = create(win, options);
+
+		disposables.push(disposeMenu);
+		const removeDisposable = () => {
+			const index = disposables.indexOf(disposeMenu);
+			if (index !== -1) {
+				disposables.splice(index, 1);
+			}
+		};
+
+		if (typeof win.once !== 'undefined') { // Support for BrowserView
+			win.once('closed', removeDisposable);
+		}
+
 		disposables.push(() => {
-			disposeMenu();
+			win.off('closed', removeDisposable);
 		});
 	};
 
