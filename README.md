@@ -19,4 +19,4 @@ Unofficial Desktop App for [www.hulu.com](https://www.hulu.com/)
 
 ## Notes
 
- - Use the Downloads button to download the app.
+ - Use the Downloads badge to download the latest version or simply get it from the releases.
