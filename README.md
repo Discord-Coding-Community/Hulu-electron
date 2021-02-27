@@ -3,7 +3,7 @@
 [![](https://img.shields.io/github/issues-raw/PhantomNimbi/Hulu-electron)](https://github.com/PhantomNimbi/Hulu-electron/blob/master/.github/ISSUE_TEMPLATE/bug_report.md)
 [![](https://img.shields.io/github/last-commit/PhantomNimbi/Hulu-electron/main)](https://github.com/PhantomNimbi/Hulu-electron)
 [![](https://img.shields.io/github/languages/code-size/PhantomNimbi/Hulu-electron)](https://github.com/PhantomNimbi/Hulu-electron)
-[![](https://img.shields.io/github/downloads/PhantomNimbi/Hulu-electron/total)](https://github.com/PhantomNimbi/Hulu-electron/releases/download/v1.1.0/Hulu-setup-110.exe)
+[![](https://img.shields.io/github/downloads/PhantomNimbi/Hulu-electron/total)](https://github.com/Discord-Coding-Community/Hulu-electron/releases/tag/v1.1.1)
 [![](https://discordapp.com/api/guilds/801125364218200074/widget.png?style=shield)](https://discord.gg/WacrBbFemB)
 
 
