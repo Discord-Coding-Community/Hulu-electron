@@ -17,6 +17,3 @@ Unofficial Desktop App for [www.hulu.com](https://www.hulu.com/)
  - Built with [jiahaog/nativefier](https://github.com/jiahaog/nativefier)
  - Packaged with [Inno Setup](https://jrsoftware.org/isinfo.php)
 
-## Notes
-
- - Use the Downloads badge to download the latest version or simply get it from the releases.
